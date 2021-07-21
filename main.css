@@ -1,3 +1,15 @@
+@media (prefers-color-svhrmr: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
 p, h1 {
     text-align: center;
     vertical-align: middle;
