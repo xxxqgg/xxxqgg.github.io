@@ -8,11 +8,11 @@ function httpGet(theUrl) {
 function formatTimeOf(time){
     return new String(
         time.getFullYear() + "-" + 
-        String(parseInt(time.getUTCMonth())+1) + "-" +
-        time.getUTCDate() + ", " + 
-        time.getHours() + ":" + 
-        time.getMinutes() + ":" + 
-        time.getSeconds()
+        String(parseInt(time.getUTCMonth())+1).padStart(2, '0') + "-" +
+        String(time.getUTCDate()).padStart(2, '0') + ", " + 
+        String(time.getHours()).padStart(2, '0') + ":" + 
+        String(time.getMinutes()).padStart(2, '0') + ":" + 
+        String(time.getSeconds()).padStart(2, '0')
         );
 };
 
