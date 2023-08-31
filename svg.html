@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<style>
+svg, div {
+  width: 1200px;
+  height: 100px;
+  border: 1px solid black;
+}
+</style>
+
+<body>
+
+<svg id="ca_canvas" onmousemove="myFunction(event)">
+  <line id="ca_curserline"/>
+  <text x="10" y="70" class="heavy">加州</text>
+</svg>
+<svg id="se_canvas" onmousemove="myFunction(event)">
+  <line id="se_curserline"/>
+  <text x="10" y="70" class="heavy">瑞典</text>
+</svg>
+<svg id="sz_canvas" onmousemove="myFunction(event)">
+  <line id="sz_curserline"/>
+  <text x="10" y="70" class="heavy">深圳</text>
+</svg>
+
+<p><a href="index.html">返回</a></p>
+<script src="svg.js"></script>
+
+</body>
