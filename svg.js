@@ -16,7 +16,6 @@ drawCanvas("sz", getOff(sz_time_data.raw_offset, sz_time_data.dst_offset));
 
 function getOff(raw, dst) {
     var off = raw + dst;
-    console.log("raw = " + raw  + "; dst = " + dst + "; hour = " + off/3600);
     return off/3600;
 }
 
@@ -59,8 +58,11 @@ function myFunction(e) {
 function drawCursorMark(abbr, x) {
   var name = abbr + "_curserline";
   var curserline = document.getElementById(name);
-  curserline.setAttribute("x1",x-10 );
-  curserline.setAttribute("x2",x-10 );
+  var temp = (x-10) % 25;
+  temp = temp < 13 ? (x-10-temp) : (x+15-temp);
+  console.log(temp);
+  curserline.setAttribute("x1", temp);
+  curserline.setAttribute("x2", temp);
   curserline.setAttribute("y1", 0);
   curserline.setAttribute("y2", 100);
   curserline.setAttribute("style","stroke:rgb(255,0,0);stroke-width:2");
