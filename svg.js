@@ -57,15 +57,24 @@ function myFunction(e) {
 
 function drawCursorMark(abbr, x) {
   var name = abbr + "_curserline";
-  var curserline = document.getElementById(name);
+  var curserline_top = document.getElementById(name+"_top");
+  var curserline_down = document.getElementById(name+"_down");
+
   var temp = (x-10) % 25;
   temp = temp < 13 ? (x-10-temp) : (x+15-temp);
   console.log(temp);
-  curserline.setAttribute("x1", temp);
-  curserline.setAttribute("x2", temp);
-  curserline.setAttribute("y1", 0);
-  curserline.setAttribute("y2", 100);
-  curserline.setAttribute("style","stroke:rgb(255,0,0);stroke-width:2");
+
+  curserline_top.setAttribute("x1", temp);
+  curserline_top.setAttribute("x2", temp);
+  curserline_top.setAttribute("y1", 0);
+  curserline_top.setAttribute("y2", 25);
+  curserline_top.setAttribute("style","stroke:rgb(255,0,0);stroke-width:2");
+
+  curserline_down.setAttribute("x1", temp);
+  curserline_down.setAttribute("x2", temp);
+  curserline_down.setAttribute("y1", 45);
+  curserline_down.setAttribute("y2", 100);
+  curserline_down.setAttribute("style","stroke:rgb(255,0,0);stroke-width:2");
 }
 
 function httpGet(theUrl) {
